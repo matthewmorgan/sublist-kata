@@ -22,12 +22,12 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>4/4</span>
+        <span class='fraction'>13/13</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">57.14% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>4/7</span>
+        <span class='fraction'>10/10</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -37,7 +37,7 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>4/4</span>
+        <span class='fraction'>11/11</span>
       </div>
     </div>
   </div>
@@ -70,66 +70,57 @@
 25
 26
 27
-28
-29
-30
-31</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+28</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">28x</span>
+<span class="cline-any cline-yes">28x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">23x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">class List {
-&nbsp;
-    constructor(list = []) {
-        this.list = list;
+    constructor(content) {
+        this.content = content || [];
+        this.length = this.content.length;
     }
-&nbsp;
-    compare(other) {
-        return {
-            '-1': isSublist(other.list, this.list)
-                ? 'SUBLIST'
-                : <span class="branch-1 cbranch-no" title="branch not covered" >'UNEQUAL',</span>
-            '0':  isSublist(other.list, this.list)
-                ? 'EQUAL'
-                : <span class="branch-1 cbranch-no" title="branch not covered" >'UNEQUAL',</span>
-            '1':  isSublist(this.list, other.list)
-                ? 'SUPERLIST'
-                : <span class="branch-1 cbranch-no" title="branch not covered" >'UNEQUAL'</span>
-        }[lengthDiff(this, other)];
+    arraysAreEqual(list1, list2) {
+        return list1.filter((element, index) =&gt; element === list2[index]).length === list1.length;
     }
-}
-&nbsp;
-function lengthDiff(one, two){
-    return String(Math.sign(one.list.length - two.list.length));
-}
-&nbsp;
-function isSublist(one, two){
-    return one.join().match(two.join());
+    compare(anotherList) {
+        if (anotherList.length === this.length) {
+            if (!this.arraysAreEqual(this.content, anotherList.content)) return 'UNEQUAL';
+            return 'EQUAL';
+        } else if (anotherList.length &gt; this.length){
+            if (this.arraysAreEqual(this.content, anotherList.content)){
+                return 'SUBLIST';
+            }
+            else {
+                return 'UNEQUAL';
+            }
+        }
+        else {
+            return 'SUPERLIST';
+        }
+    }
 }
 &nbsp;
 export default List;
@@ -139,7 +130,7 @@ export default List;
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Jul 24 2017 14:22:41 GMT-0400 (EDT)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Jul 24 2017 19:48:56 GMT-0400 (EDT)
 </div>
 </div>
 <script src="prettify.js"></script>

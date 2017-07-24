@@ -53,49 +53,49 @@ describe('sublist', () => {
     expect(listOne.compare(listTwo)).toEqual('SUBLIST');
   });
 
-  xtest('sublist at start', () => {
+  test('sublist at start', () => {
     const listOne = new List([0, 1, 2]);
     const listTwo = new List([0, 1, 2, 3, 4, 5]);
 
     expect(listOne.compare(listTwo)).toEqual('SUBLIST');
   });
 
-  xtest('sublist in middle', () => {
+  test('sublist in middle', () => {
     const listOne = new List([2, 3, 4]);
     const listTwo = new List([0, 1, 2, 3, 4, 5]);
 
     expect(listOne.compare(listTwo)).toEqual('SUBLIST');
   });
 
-  xtest('sublist at end', () => {
+  test('sublist at end', () => {
     const listOne = new List([3, 4, 5]);
     const listTwo = new List([0, 1, 2, 3, 4, 5]);
 
     expect(listOne.compare(listTwo)).toEqual('SUBLIST');
   });
 
-  xtest('at start of superlist', () => {
+  test('at start of superlist', () => {
     const listOne = new List([0, 1, 2, 3, 4, 5]);
     const listTwo = new List([0, 1, 2]);
 
     expect(listOne.compare(listTwo)).toEqual('SUPERLIST');
   });
 
-  xtest('in middle of superlist', () => {
+  test('in middle of superlist', () => {
     const listOne = new List([0, 1, 2, 3, 4, 5]);
     const listTwo = new List([2, 3]);
 
     expect(listOne.compare(listTwo)).toEqual('SUPERLIST');
   });
 
-  xtest('at end of superlist', () => {
+  test('at end of superlist', () => {
     const listOne = new List([0, 1, 2, 3, 4, 5]);
     const listTwo = new List([3, 4, 5]);
 
     expect(listOne.compare(listTwo)).toEqual('SUPERLIST');
   });
 
-  xtest('first list missing element from second list', () => {
+  test('first list missing element from second list', () => {
     const listOne = new List([1, 3]);
     const listTwo = new List([1, 2, 3]);
 
