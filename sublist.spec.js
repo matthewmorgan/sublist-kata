@@ -10,35 +10,35 @@ describe('sublist', () => {
     expect(listOne.compare(listTwo)).toEqual('EQUAL');
   });
 
-  xtest('an empty list is a sublist of a non-empty list', () => {
+  test('an empty list is a sublist of a non-empty list', () => {
     const listOne = new List();
     const listTwo = new List([1, 2, 3]);
 
     expect(listOne.compare(listTwo)).toEqual('SUBLIST');
   });
 
-  xtest('non empty list contains empty list', () => {
+  test('non empty list contains empty list', () => {
     const listOne = new List([1, 2, 3]);
     const listTwo = new List();
 
     expect(listOne.compare(listTwo)).toEqual('SUPERLIST');
   });
 
-  xtest('a non-empty list equals itself', () => {
+  test('a non-empty list equals itself', () => {
     const listOne = new List([1, 2, 3]);
     const listTwo = new List([1, 2, 3]);
 
     expect(listOne.compare(listTwo)).toEqual('EQUAL');
   });
 
-  xtest('two different lists are unequal', () => {
+  test('two different lists are unequal', () => {
     const listOne = new List([1, 2, 3]);
     const listTwo = new List([2, 3, 4]);
 
     expect(listOne.compare(listTwo)).toEqual('UNEQUAL');
   });
 
-  xtest('false start', () => {
+  test('false start', () => {
     const listOne = new List([1, 2, 5]);
     const listTwo = new List([0, 1, 2, 3, 1, 2, 5, 6]);
 
@@ -46,7 +46,7 @@ describe('sublist', () => {
 
   });
 
-  xtest('consecutive', () => {
+  test('consecutive', () => {
     const listOne = new List([1, 1, 2]);
     const listTwo = new List([0, 1, 1, 1, 2, 1, 2]);
 
