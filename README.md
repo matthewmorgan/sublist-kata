@@ -34,10 +34,10 @@ $ npm install
 
 ## Making the test suite pass
 
-Execute the tests with:
+Run Jest in watch mode, with coverage info like this:
 
 ```bash
-$ jest --watch
+$ npm run watch:cover
 ```
 
 In the test suites all tests but the first have been skipped.
