@@ -4,16 +4,14 @@ class List {
         this.length = this.content.length;
     }
     compare(anotherList) {
-        if (anotherList.length > 0 && this.length > 0) {
+        if (anotherList.length === this.length) {
             return 'EQUAL';
-        } else if (anotherList.length > 0){
+        } else if (anotherList.length > this.length){
             return 'SUBLIST';
         }
-        else if (this.length > 0) {
+        else {
             return 'SUPERLIST';
         }
-        return 'EQUAL';
-
     }
 }
 
