@@ -7,6 +7,9 @@ class List {
         if (anotherList.length > 0){
             return 'SUBLIST';
         }
+        else if (this.length > 0) {
+            return 'SUPERLIST';
+        }
         return 'EQUAL';
 
     }
