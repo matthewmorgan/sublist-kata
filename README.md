@@ -17,16 +17,10 @@ Examples:
  * A = [1, 2, 3, 4, 5], B = [2, 3, 4], A is a superlist of B
  * A = [1, 2, 4], B = [1, 2, 3, 4, 5], A is not a superlist of, sublist of or equal to B
 
-## Setup
-
-Go through the setup instructions for ECMAScript to
-install the necessary dependencies:
-
-http://exercism.io/languages/ecmascript
 
 ## Requirements
 
-You should use NodeJS v6 or above.
+You should use [NodeJS v6](https://nodejs.org/en/download/) or above.
 
 Install assignment dependencies:
 
