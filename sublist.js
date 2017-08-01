@@ -6,25 +6,26 @@ class List {
     arraysAreEqual(list1, list2) {
         return list1.filter((element, index) => element === list2[index]).length === list1.length;
     }
+    isSublist(list1) {
+        for (let i=0; i <= list1.content.length - this.content.length; i++) {
+            if (this.arraysAreEqual(this.content, list1.content.slice(i))) {
+                return true;
+            }
+        }
+        return false;
+    }
     compare(anotherList) {
         if (anotherList.length === this.length) {
             if (!this.arraysAreEqual(this.content, anotherList.content)) return 'UNEQUAL';
             return 'EQUAL';
         } else if (anotherList.length > this.length){
-            for (let i=0; i <= anotherList.content.length - this.content.length; i++) {
-                if (this.arraysAreEqual(this.content, anotherList.content.slice(i))) {
-                    return 'SUBLIST';
-                }
-            }
+            if (this.isSublist(anotherList))
+                return 'SUBLIST';
             return 'UNEQUAL';
-
         }
         else { // (anotherList.length < this.length)
-            for (let i=0; i <= this.content.length - anotherList.content.length; i++) {
-                if (this.arraysAreEqual(anotherList.content, this.content.slice(i))) {
-                    return 'SUPERLIST';
-                }
-            }
+            if (anotherList.isSublist(this))
+                return 'SUPERLIST';
             return 'UNEQUAL';
         }
     }
