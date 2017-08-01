@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1500920561683" clover="3.2.0">
-  <project timestamp="1500920561683" name="All files">
-    <metrics statements="4" coveredstatements="4" conditionals="7" coveredconditionals="4" methods="4" coveredmethods="4" elements="15" coveredelements="12" complexity="0" loc="4" ncloc="4" packages="1" files="1" classes="1">
-      <file name="sublist.js" path="/Users/mmorgan/exercism-repos/ecmascript/exercises/sublist/sublist.js">
-        <metrics statements="4" coveredstatements="4" conditionals="7" coveredconditionals="4" methods="4" coveredmethods="4"/>
-        <line num="4" count="2" type="stmt"/>
-        <line num="8" count="1" type="stmt"/>
-        <line num="23" count="1" type="stmt"/>
-        <line num="27" count="3" type="stmt"/>
+<coverage generated="1501604375029" clover="3.2.0">
+  <project timestamp="1501604375029" name="All files">
+    <metrics statements="9" coveredstatements="9" conditionals="8" coveredconditionals="8" methods="4" coveredmethods="4" elements="21" coveredelements="21" complexity="0" loc="9" ncloc="9" packages="1" files="1" classes="1">
+      <file name="sublist.js" path="/Users/dbraley/source/sublist-kata/sublist.js">
+        <metrics statements="9" coveredstatements="9" conditionals="8" coveredconditionals="8" methods="4" coveredmethods="4"/>
+        <line num="3" count="26" type="cond" truecount="2" falsecount="0"/>
+        <line num="4" count="26" type="stmt"/>
+        <line num="7" count="6" type="stmt"/>
+        <line num="10" count="13" type="cond" truecount="2" falsecount="0"/>
+        <line num="11" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="13" count="10" type="cond" truecount="2" falsecount="0"/>
+        <line num="14" count="6" type="stmt"/>
+        <line num="17" count="4" type="stmt"/>
       </file>
     </metrics>
   </project>
