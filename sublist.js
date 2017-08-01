@@ -15,19 +15,13 @@ class List {
         return false;
     }
     compare(anotherList) {
-        if (anotherList.length === this.length) {
-            if (!this.arraysAreEqual(this.content, anotherList.content)) return 'UNEQUAL';
-            return 'EQUAL';
-        } else if (anotherList.length > this.length){
-            if (this.isSublist(anotherList))
-                return 'SUBLIST';
-            return 'UNEQUAL';
-        }
-        else { // (anotherList.length < this.length)
-            if (anotherList.isSublist(this))
-                return 'SUPERLIST';
-            return 'UNEQUAL';
-        }
+        const subList = this.isSublist(anotherList);
+        const superList = anotherList.isSublist(this);
+        if (subList && superList) return "EQUAL";
+        if (subList) return "SUBLIST";
+        if (superList) return "SUPERLIST";
+
+        return 'UNEQUAL';
     }
 }
 
