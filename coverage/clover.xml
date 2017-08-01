@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1501605445405" clover="3.2.0">
-  <project timestamp="1501605445405" name="All files">
+<coverage generated="1501605533200" clover="3.2.0">
+  <project timestamp="1501605533200" name="All files">
     <metrics statements="15" coveredstatements="15" conditionals="12" coveredconditionals="12" methods="4" coveredmethods="4" elements="31" coveredelements="31" complexity="0" loc="15" ncloc="15" packages="1" files="1" classes="1">
       <file name="sublist.js" path="/Users/dbraley/source/sublist-kata/sublist.js">
         <metrics statements="15" coveredstatements="15" conditionals="12" coveredconditionals="12" methods="4" coveredmethods="4"/>
-        <line num="3" count="30" type="cond" truecount="2" falsecount="0"/>
-        <line num="4" count="30" type="stmt"/>
-        <line num="7" count="83" type="stmt"/>
-        <line num="10" count="15" type="cond" truecount="2" falsecount="0"/>
-        <line num="11" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="3" count="34" type="cond" truecount="2" falsecount="0"/>
+        <line num="4" count="34" type="stmt"/>
+        <line num="7" count="90" type="stmt"/>
+        <line num="10" count="17" type="cond" truecount="2" falsecount="0"/>
+        <line num="11" count="4" type="cond" truecount="2" falsecount="0"/>
         <line num="12" count="2" type="stmt"/>
-        <line num="13" count="12" type="cond" truecount="2" falsecount="0"/>
+        <line num="13" count="13" type="cond" truecount="2" falsecount="0"/>
         <line num="14" count="7" type="stmt"/>
         <line num="15" count="19" type="cond" truecount="2" falsecount="0"/>
         <line num="16" count="6" type="stmt"/>
         <line num="19" count="1" type="stmt"/>
-        <line num="23" count="5" type="stmt"/>
-        <line num="24" count="11" type="cond" truecount="2" falsecount="0"/>
+        <line num="23" count="6" type="stmt"/>
+        <line num="24" count="13" type="cond" truecount="2" falsecount="0"/>
         <line num="25" count="4" type="stmt"/>
-        <line num="28" count="1" type="stmt"/>
+        <line num="28" count="2" type="stmt"/>
       </file>
     </metrics>
   </project>
