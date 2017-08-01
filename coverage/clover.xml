@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1501604375029" clover="3.2.0">
-  <project timestamp="1501604375029" name="All files">
-    <metrics statements="9" coveredstatements="9" conditionals="8" coveredconditionals="8" methods="4" coveredmethods="4" elements="21" coveredelements="21" complexity="0" loc="9" ncloc="9" packages="1" files="1" classes="1">
+<coverage generated="1501605198863" clover="3.2.0">
+  <project timestamp="1501605198863" name="All files">
+    <metrics statements="12" coveredstatements="12" conditionals="10" coveredconditionals="10" methods="4" coveredmethods="4" elements="26" coveredelements="26" complexity="0" loc="12" ncloc="12" packages="1" files="1" classes="1">
       <file name="sublist.js" path="/Users/dbraley/source/sublist-kata/sublist.js">
-        <metrics statements="9" coveredstatements="9" conditionals="8" coveredconditionals="8" methods="4" coveredmethods="4"/>
-        <line num="3" count="26" type="cond" truecount="2" falsecount="0"/>
-        <line num="4" count="26" type="stmt"/>
-        <line num="7" count="6" type="stmt"/>
-        <line num="10" count="13" type="cond" truecount="2" falsecount="0"/>
+        <metrics statements="12" coveredstatements="12" conditionals="10" coveredconditionals="10" methods="4" coveredmethods="4"/>
+        <line num="3" count="28" type="cond" truecount="2" falsecount="0"/>
+        <line num="4" count="28" type="stmt"/>
+        <line num="7" count="58" type="stmt"/>
+        <line num="10" count="14" type="cond" truecount="2" falsecount="0"/>
         <line num="11" count="3" type="cond" truecount="2" falsecount="0"/>
         <line num="12" count="2" type="stmt"/>
-        <line num="13" count="10" type="cond" truecount="2" falsecount="0"/>
-        <line num="14" count="6" type="stmt"/>
-        <line num="17" count="4" type="stmt"/>
+        <line num="13" count="11" type="cond" truecount="2" falsecount="0"/>
+        <line num="14" count="7" type="stmt"/>
+        <line num="15" count="19" type="cond" truecount="2" falsecount="0"/>
+        <line num="16" count="6" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="23" count="4" type="stmt"/>
       </file>
     </metrics>
   </project>

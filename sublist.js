@@ -11,7 +11,13 @@ class List {
             if (!this.arraysAreEqual(this.content, anotherList.content)) return 'UNEQUAL';
             return 'EQUAL';
         } else if (anotherList.length > this.length){
-            return 'SUBLIST';
+            for (let i=0; i <= anotherList.content.length - this.content.length; i++) {
+                if (this.arraysAreEqual(this.content, anotherList.content.slice(i))) {
+                    return 'SUBLIST';
+                }
+            }
+            return 'UNEQUAL';
+
         }
         else {
             return 'SUPERLIST';

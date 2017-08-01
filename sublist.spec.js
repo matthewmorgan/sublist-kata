@@ -95,7 +95,7 @@ describe('sublist', () => {
     expect(listOne.compare(listTwo)).toEqual('SUPERLIST');
   });
 
-  xtest('first list missing element from second list', () => {
+  test('first list missing element from second list', () => {
     const listOne = new List([1, 3]);
     const listTwo = new List([1, 2, 3]);
 
