@@ -19,8 +19,13 @@ class List {
             return 'UNEQUAL';
 
         }
-        else {
-            return 'SUPERLIST';
+        else { // (anotherList.length < this.length)
+            for (let i=0; i <= this.content.length - anotherList.content.length; i++) {
+                if (this.arraysAreEqual(anotherList.content, this.content.slice(i))) {
+                    return 'SUPERLIST';
+                }
+            }
+            return 'UNEQUAL';
         }
     }
 }
